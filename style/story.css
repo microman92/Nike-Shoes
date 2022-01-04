@@ -287,5 +287,13 @@
     .story__description{
         padding: 20px;
     }
+    .video{
+        height: 100%;
+    }
+    .play::before{
+        top: -20px;
+        left: -10px;
+    }
+    
 }
 
