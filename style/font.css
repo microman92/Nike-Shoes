@@ -1,45 +1,160 @@
 @font-face {
     font-family: 'FontAwesome';
-    src: url('../fotsawesome/webfonts/fa-light-300.woff');
+    src        : url('../fotsawesome/webfonts/fa-light-300.woff');
     font-weight: 300;
 }
 
-
- .fall {
+@font-face {
     font-family: 'FontAwesome';
+    src        : url('../fotsawesome/webfonts/fa-duotone-300.woff');
     font-weight: 300;
+}
+
+.fad {
+    font-family: 'fontAwesome';
+    font-weight: 900;
+    font-style : normal;
+    font-size  : 26px;
+    position   : relative;
+}
+
+.far {
+    font-family: 'fontAwesome';
+    font-weight: 400;
+    font-style : normal;
+    font-size  : 26px;
+}
+
+.pause {
+    font-family: 'fontAwesome';
+    font-weight: 400;
+    font-style : normal;
+    font-size  : 26px;
+}
+
+.pause::before {
+    content: '\f04c';
+    color  : #81D066;
+    border : none;
+    outline: none;
+}
+
+.fullScreen {
+    font-family: 'fontAwesome';
+    font-weight: 900;
+    font-style : normal;
+    color: #81D066;
+}
+.fullScreen::before {
+   content: '\f320';
+}
+
+
+
+.vol__m {
+    font-family: 'fontAwesome';
+    font-weight: 400;
+    font-style : normal;
+    font-size  : 26px;
+}
+
+.vol__m::before {
+    content: '\f028';
+    color  : #81D066;
+}
+
+.vol__muted{
+    font-family: 'fontAwesome';
+    font-weight: 400;
     font-style: normal;
     font-size: 26px;
-    color: yellow;
-} 
-.icon__star::before{
+}
+.vol__muted::before{
+   content: '\f2e2';
+   color: #81D066;
+}
+
+
+
+.expand {
+    font-family: 'fontAwesome';
+    font-weight: 400;
+    font-style : normal;
+    font-size  : 26px;
+}
+
+.fa-expand:before {
+    content: "\f065";
+}
+
+.full {
+    border : none;
+    outline: none;
+
+}
+.full::before {
+    content: '\f326';
+    border : none;
+    outline: none;
+    color  : #81D066;
+}
+
+
+.play__vid::before {
+    content: '\f04b';
+    color  : #81D066;
+}
+
+.play::before {
+    content      : "\f144";
+    color        : #81D066;
+    border-radius: 50%;
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+}
+
+
+
+.fall {
+    font-family: 'FontAwesome';
+    font-weight: 300;
+    font-style : normal;
+    font-size  : 26px;
+    color      : yellow;
+}
+
+.icon__star::before {
     content: '\f005';
-    
-} 
+
+}
 
 
 
 @font-face {
     font-family: 'Raleway regular';
-    src: url('../fonts/Raleway-Regular.ttf');
+    src        : url('../fonts/Raleway-Regular.ttf');
     font-weight: 400;
-    font-style: normal;
+    font-style : normal;
 }
+
 @font-face {
     font-family: 'Raleway bold';
-    src: url('../fonts/Raleway-Bold.ttf');
+    src        : url('../fonts/Raleway-Bold.ttf');
     font-weight: 700;
-    font-style: normal;
+    font-style : normal;
 }
+
 @font-face {
     font-family: 'Raleway semiBold';
-    src: url('../fonts/Raleway-SemiBold.ttf');
+    src        : url('../fonts/Raleway-SemiBold.ttf');
     font-weight: 600;
-    font-style: normal;
+    font-style : normal;
 }
+
 @font-face {
     font-family: 'Raleway medium';
-    src: url('../fonts/Raleway-Medium.ttf');
+    src        : url('../fonts/Raleway-Medium.ttf');
     font-weight: 500;
-    font-style: normal;
+    font-style : normal;
 }
