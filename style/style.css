@@ -1,6 +1,7 @@
 @import 'font.css';
 @import 'product.css';
 @import 'story.css';
+@import 'people.css';
 
 :root {
     --col    : #5CBE3A;
@@ -477,7 +478,7 @@ a {
 
 @media (max-width:576px) {
     .container {
-        max-width: 1320px;
+        max-width: 720px;
         width    : 100%;
         padding  : 0 20px;
         margin   : 0 auto;

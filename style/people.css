@@ -1,0 +1,127 @@
+.people {
+    display        : flex;
+    margin-top     : 170px;
+    width          : 100%;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+}
+
+.people__right {
+    position: relative;
+}
+
+.people__border {
+    border       : 20px solid #E5F2E1;
+    border-radius: 10px;
+    width        : 100%;
+    height       : 100%;
+    position     : absolute;
+    bottom       : 40px;
+    left         : -50px;
+}
+
+.right__cards {
+    position: inherit;
+    width   : 100%;
+    height  : 100%;
+}
+
+.people__left {
+    display          : flex;
+    flex-direction   : column;
+    justify-content  : center;
+    background-image : url('../img/nike.svg');
+    background-repeat: no-repeat;
+    width            : 40%;
+}
+
+.people__title {
+    font-family  : var(--ral-b);
+    font-size    : 44px;
+    line-height  : 130%;
+    color        : #051101;
+    max-width    : 476px;
+    margin-bottom: 25px;
+}
+
+.people__title_icon {
+    display      : flex;
+    margin-bottom: 25px;
+}
+
+.people__icon {
+    display     : flex;
+    align-items : center;
+    margin-right: 15px;
+}
+
+.people__text {
+    font-family: var(--ral-reg);
+    font-size  : 16px;
+    line-height: 150%;
+    color      : #051101;
+    opacity    : 0.7;
+    max-width  : 392px;
+}
+
+@media (max-width:1100px) {
+    .container {
+        max-width: 960px;
+        width    : 100%;
+        padding  : 0 20px;
+        margin   : 0 auto;
+    }
+
+    .people__left {
+        width              : 100%;
+        background-position: center;
+        align-items        : center;
+        margin-top         : 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .right__cards {
+        max-width: 540px;
+    }
+
+    .people__border {
+        display: none;
+    }
+
+    .people__left {
+        background-size: 540px;
+    }
+}
+
+@media (max-width:576px) {
+    .people {
+        padding: 0 20px;
+    }
+
+    .people__title {
+        max-width: 350px;
+        font-size: 35px;
+    }
+
+    .people__left {
+        background-size: 350px;
+
+    }
+
+}
+
+@media (max-width:420px) {
+    .people__text {
+        max-width: 380px;
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width:320px) {
+    .people__left {
+        background-size: 283px;
+
+    }
+}
