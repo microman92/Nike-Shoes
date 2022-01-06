@@ -4,6 +4,7 @@
 @import 'people.css';
 @import 'slider.css';
 @import 'subscribe.css';
+@import 'footer.css';
 
 :root {
     --col    : #5CBE3A;
@@ -431,6 +432,7 @@ a {
         left          : -100%;
         display       : flex;
         flex-direction: column;
+        top: 60px;
     }
 
     .nav__list {

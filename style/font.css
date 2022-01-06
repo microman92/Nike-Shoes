@@ -10,6 +10,7 @@
     font-weight: 300;
 }
 
+
 .fad {
     font-family: 'fontAwesome';
     font-weight: 900;
@@ -49,8 +50,6 @@
    content: '\f320';
 }
 
-
-
 .vol__m {
     font-family: 'fontAwesome';
     font-weight: 400;
@@ -73,8 +72,6 @@
    content: '\f2e2';
    color: #81D066;
 }
-
-
 
 .expand {
     font-family: 'fontAwesome';
@@ -113,8 +110,6 @@
     top          : 0;
     left         : 0;
 }
-
-
 
 .fall {
     font-family: 'FontAwesome';
