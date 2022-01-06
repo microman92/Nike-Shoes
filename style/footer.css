@@ -101,4 +101,7 @@
     .follow__icon {
         width: 40px;
     }
+    .footer__icon_group{
+        margin-top: 10px;
+    }
 }
