@@ -1,5 +1,3 @@
-
-
 /* ============== Tabs ============== */
 let btnOne = document.getElementById('one');
 let btnTwo = document.getElementById('two');
@@ -56,6 +54,7 @@ function initRatings() {
         }
 
     }
+
     function initRatingsVars(rating) {
         ratingActive = rating.querySelector('.rating__active');
         ratingValue = rating.querySelector('.rating__value');
@@ -212,3 +211,158 @@ class Player {
 }
 
 let player = new Player('.player');
+/* ================== Slider ============== */
+
+class Slider{
+    constructor({el, active, duration, autoplay, indicators, buttons, interval}){
+        this.slider = el instanceof HTMLElement ? el : document.querySelector(el);
+        this.active = active !== undefined ? active : 0;
+        this.duration = duration !== undefined ? duration : 400;
+        this.autoplay = autoplay;
+        this.indicators = indicators;
+        this.buttons = buttons;
+        this.interval = interval !== undefined ? interval : 3000;
+        this.id = '';
+        this.sliderContent = this.slider.querySelector('.slider__all_block');
+        this.sliderItems = [...this.sliderContent.children];
+        if(this.indicators){
+            let indParent = this.slider.querySelector('.control__dots');
+            for (let i = 0; i < this.sliderItems.length; i++) {
+                let li = document.createElement('li');
+                indParent.append(li);                
+            }
+        }
+        this.sliderItems.forEach(item => {
+            item.style.transition = `${this.duration}ms linear`;
+        })
+        this.sliderPrev = this.slider.querySelector('.controls__left') ?? null;
+        this.sliderNext = this.slider.querySelector('.controls__right') ?? null;
+        this.indicatorsItems = this.indicators ? [...this.slider.querySelectorAll('.control__dots li')] : null;
+        this.changeClass();
+        if(this.buttons){
+            this.sliderPrev.addEventListener('click', () => this.changeSlide(this.sliderPrev));
+            this.sliderNext.addEventListener('click', () => this.changeSlide(this.sliderNext));
+        }
+        if(this.indicators) {
+            this.indicatorsItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let index = this.indicatorsItems.findIndex(item => item == e.target);
+                    this.active = index;
+                    this.changeClass();
+                })
+            })
+        }
+        this.autoplaying();
+        
+    }
+    init(){
+        this.width 
+    }
+    
+    changeClass(){
+        if(this.autoplay) {
+           clearInterval(this.id);
+           this.autoplaying();
+        }
+        for (let i = 0; i < this.sliderItems.length; i++) {
+            this.sliderItems[i].classList.remove('active');
+            if(this.indicatorsItems) this.indicatorsItems[i].classList.remove('active');
+        }
+        this.sliderItems[this.active].classList.add('active');
+        if(this.indicatorsItems) this.indicatorsItems[this.active].classList.add('active');
+    }
+    changeSlide(btn = this.sliderNext){
+        if(btn == this.sliderNext){
+            this.active++;
+            if(this.active == this.sliderItems.length) this.active = 0;  
+        }
+        else if(btn == this.sliderPrev){
+            this.active--;
+            if(this.active < 0) this.active = this.sliderItems.length - 1;
+        }
+        else throw new Error('Wrong Button');
+        this.changeClass();
+    }
+    autoplaying(){
+        if(this.autoplay){
+           this.id = setInterval(() => {
+                this.changeSlide();
+           }, this.interval);
+        }
+    }
+};
+const mySlider = new Slider({
+    el: '.slider',
+    active: 1,//указывается от 0
+    duration: 2000,
+    autoplay: true,
+    indicators: true,
+    buttons: true,
+    interval: 4000,
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* class Slider {
+    constructor(options) {
+        this.slider = document.querySelector(options.slider);
+        this.sliderLine = this.slider.querySelector('.slider__all_block');
+        this.slides = this.sliderLine.children;
+        this.next = this.slider.querySelector('.controls__right');
+        this.prev = this.slider.querySelector('.controls__left');
+        this.dir = options.direction.toUpperCase() == 'X' ? 'X' : Y;
+        this.timeMove = options.time != undefined ? options.time : 1000;
+        this.width = this.slider.clientWidth;
+        this.height = this.slider.clientHeight;
+        this.moveSize = 'X' === this.dir ? this.width : this.height;
+        this.activeSlide = 0;
+        this.sliderLine.style = `height: ${this.height}px; overflow: hidden;`
+        for (let i = 0; i < this.slides.length; i++) {
+            const sl = this.slides[i];
+            sl.style = `width:${this.width}px; height: ${this.height}px`
+            if (i != this.activeSlide) {
+                sl.style.transform = `translate${this.dir}(${this.moveSize}px)`;
+            }
+            if (i === this.slides.length - 1) {
+                sl.style.transform = `translate ${this.dir}(${-this.moveSize}px)`
+            }
+        }
+        this.next.addEventListener('click',() => this.move(this.next))
+        this.prev.addEventListener('click',() => this.move(this.prev))
+    }
+    move(btn){
+      let btnButtons = btn == this.next ? this.moveSize * -1 : this.moveSize;
+      this.slides[this.activeSlide].style.transform = `translate${this.dir}(${btnButtons}px)`;
+      this.slides[this.activeSlide].style.transition = this.timeMove + 'ms';
+      if (btn == this.next) {
+          this.activeSlide++;
+          if (this.activeSlide >= this.slides.length) {
+              
+          }
+      }else if (btn == this.prev){
+          this.activeSlide--
+      }
+      this.slides[this.activeSlide].style.transform = `translate${this.dir}(0px)`;
+      this.slides[this.activeSlide].style.transition = this.timeMove + 'ms';
+    }
+}
+
+const slider = new Slider({
+    slider: '.slider',
+    direction: 'x',
+    time: 1000
+
+}) */

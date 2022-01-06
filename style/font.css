@@ -129,6 +129,13 @@
 
 }
 
+.arrow-left::before{
+    content: '\f060';
+}
+.arrow-right::before{
+    content: '\f061';
+}
+
 
 
 @font-face {

@@ -2,6 +2,7 @@
 @import 'product.css';
 @import 'story.css';
 @import 'people.css';
+@import 'slider.css';
 
 :root {
     --col    : #5CBE3A;

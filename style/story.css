@@ -52,7 +52,7 @@
 .player__line_current {
     height    : 100%;
     background: red;
-    width     : 10px;
+    width     : 0px;
 }
 
 .player__panel_left {
