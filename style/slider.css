@@ -121,7 +121,6 @@
     line-height: 140%;
     color: #051101;
     text-transform: uppercase;
-    text-align: right;
     display: flex;
     padding: 56px 0px;
     justify-content: center;
@@ -271,7 +270,9 @@
         margin-left: initial;
         padding-top: 40px;
     }
-    .
+    .sub__text{
+        max-width: 205px;
+    }
 
     .sub__cards {
         max-width: 75px;
