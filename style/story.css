@@ -236,7 +236,6 @@
 
     .story__title {
         font-size  : 38px;
-        max-width  : 360px;
         max-width  : 320px;
         width      : 100%;
     }

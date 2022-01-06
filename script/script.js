@@ -296,7 +296,7 @@ const mySlider = new Slider({
     el: '.slider',
     active: 1,//указывается от 0
     duration: 2000,
-    autoplay: true,
+    autoplay: false,
     indicators: true,
     buttons: true,
     interval: 4000,

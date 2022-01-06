@@ -100,13 +100,19 @@
     }
 
     .people__title {
-        max-width: 350px;
-        font-size: 35px;
+        max-width: 260px;
+        font-size: 28px;
+    }
+    .people__text{
+        font-size: 15px;
     }
 
     .people__left {
         background-size: 350px;
 
+    }
+    .right__cards{
+        max-width: 480px;
     }
 
 }
