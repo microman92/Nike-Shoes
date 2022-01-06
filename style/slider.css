@@ -215,13 +215,13 @@
 
 @media (max-width:576px) {
     .slider__inner {
-        padding-right: initial;
-        max-width: 500px;
+        padding-right: 0px;
+        max-width: 344px;
     }
 
     .slider__inner.active {
-        padding-right: initial;
-        max-width: 500px;
+        padding-right: 0px;
+        max-width: 346px;
     }
 
     .slider__line {
@@ -288,12 +288,12 @@
     }
 
     .slider__inner {
-        padding-right: initial;
+        padding-right: 0px;
         max-width: 315px;
     }
 
     .slider__inner .active {
-        padding-right: initial;
+        padding-right: 0px;
         max-width: 315px;
     }
 
@@ -309,7 +309,4 @@
         padding: 30px 0px;
     }
 
-    .slider {
-        max-width: 315px;
-    }
 }
