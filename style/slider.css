@@ -188,6 +188,12 @@
     .slider__all_block {
         margin-bottom: 50px;
     }
+    .inner__down{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+  
 }
 
 @media (max-width:768px) {
@@ -286,7 +292,7 @@
         max-width: 315px;
     }
 
-    .slider__inner.active {
+    .slider__inner .active {
         padding-right: initial;
         max-width: 315px;
     }
