@@ -16,7 +16,7 @@
 .player__play_circle {
     position  : absolute;
     left      : 50%;
-    top       : 50%;
+    top       : 40%;
     transform : translate(-50%, -50%);
     background: transparent;
     border    : none;
